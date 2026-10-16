@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PracticeLab Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <strong>PracticeLab</strong>
+      </div>
+      <div id="authStatus" class="auth-badge">Checking Auth...</div>
+    </div>
+
+    <!-- Login Section -->
+    <div id="loginSection" class="auth-box" style="display: none;">
+      <div class="auth-box-title">Sign In to PracticeLab</div>
+      <form id="loginForm">
+        <div class="form-group">
+          <input type="email" id="loginEmail" class="form-input" placeholder="Email address" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" class="form-input" placeholder="Password" required />
+        </div>
+        <button type="submit" id="btnLogin" class="btn btn-primary" style="margin-top: 8px;">Sign In</button>
+      </form>
+      <div id="loginError" class="auth-error"></div>
+    </div>
+
+    <!-- Account Details Bar (When Logged In) -->
+    <div id="accountBar" class="account-bar" style="display: none;">
+      <span id="accountUserEmail" class="account-email"></span>
+      <button id="btnLogout" class="btn-text-danger">Disconnect</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="contentArea" class="popup-body">
+      <div class="loading-spinner">Scanning current page...</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

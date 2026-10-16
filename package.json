@@ -1,0 +1,17 @@
+{
+  "name": "practicelab-root",
+  "version": "1.0.0",
+  "description": "PracticeLab - Adaptive learning platform for algorithmic problem solving",
+  "scripts": {
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "delete-user": "node server/deleteUser.js",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
